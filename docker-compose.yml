@@ -1,0 +1,19 @@
+services:
+  jenkins-server:
+    image: jenkins/jenkins:lts-jdk17
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - 'jenkins_home:/var/jenkins_home'
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+          memory: 4G
+        reservations:
+          cpus: 1
+          memory: 2G
+
+volumes:
+  jenkins_home:

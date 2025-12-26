@@ -1,0 +1,10 @@
+.venv
+.idea
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+Jenkinsfile
+*.pyi
+*.pyx
+*.ipynb
